@@ -7,5 +7,7 @@ public interface Country {
     String getName();
     String getPresident();
     String getPopulation();
-
+    void setName(String luettu);
+    void setPresident(String luettu);
+    void setPopulation(String luettu);
 }

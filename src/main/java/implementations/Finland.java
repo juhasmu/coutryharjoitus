@@ -22,4 +22,18 @@ public class Finland implements Country {
     public String getPopulation() {
         return population;
     }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setPopulation(String population) {
+        this.population = population;
+    }
+
+    public void setPresident(String president) {
+        this.president = president;
+    }
+
+
 }

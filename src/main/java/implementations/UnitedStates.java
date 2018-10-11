@@ -22,4 +22,16 @@ public class UnitedStates implements Country{
     public String getPopulation() {
         return population;
     }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setPresident(String president) {
+        this.president = president;
+    }
+
+    public void setPopulation(String population) {
+        this.population = population;
+    }
 }

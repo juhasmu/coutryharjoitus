@@ -3,6 +3,7 @@ package implementations;
 import config.AppConfig;
 import interfaces.Country;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import implementations.Tallennus;
 
 import java.util.Scanner;
 
@@ -17,13 +18,23 @@ public class RunApp {
             System.out.print("Kirjoita jotain> ");
             luettu = lukija.nextLine();
             System.out.println(luettu);
-            if(luettu.equals("getFinland")){
+            if(luettu.contains("Finland")){
                 country = ctx.getBean(Finland.class);
-                System.out.println(country.getName()+" population is "+country.getPopulation()+ " and president is "+country.getPresident());
+                if(luettu.equals("getFinland")){
+                    System.out.println(country.getName()+" population is "+country.getPopulation()+ " and president is "+country.getPresident());
+                }
+                if(luettu.equals("setFinland")){
+                   new Tallennus(country);
+                }
             }
-            if(luettu.equals("getUnitedStates")){
+            if(luettu.contains("UnitedStates")){
                 country = ctx.getBean(UnitedStates.class);
-                System.out.println(country.getName()+" population is "+country.getPopulation()+ " and president is  "+country.getPresident());
+                if(luettu.equals("getUnitedStates")){
+                    System.out.println(country.getName()+" population is "+country.getPopulation()+ " and president is  "+country.getPresident());
+                }
+                if (luettu.equals("setUnitedStates")){
+                    new Tallennus(country);
+                }
             }
             if(luettu.equals("0")) {
                 return;
