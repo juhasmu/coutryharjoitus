@@ -17,7 +17,7 @@ public class Tallennus {
             luettu = " ";
         }
         if(luettu.equals("Population")){
-            System.out.print("Anna uusi nimi> ");
+            System.out.print("Anna arvo> ");
             luettu=lukija.nextLine();
             country.setPopulation(luettu);
             luettu = " ";
