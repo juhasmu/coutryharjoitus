@@ -6,16 +6,10 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 public class Kirjoita {
     public Kirjoita(AnnotationConfigApplicationContext ctx, String luettu) {
         Country country = null;
-        if(luettu.contains("Finland")){
-            country = ctx.getBean(Finland.class);
+        country = Avustaja.haeMaa(ctx,luettu);
+        if(country !=null) {
             new Tallennus(country);
             return;
         }
-        if(luettu.contains("UnitedStates")){
-            country = ctx.getBean(UnitedStates.class);
-            new Tallennus(country);
-            return;
-        }
-        System.out.println("Anna databacesta löytyvä maa");
     }
 }
