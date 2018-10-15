@@ -23,6 +23,7 @@ public class RunApp {
             }
             if(luettu.startsWith("set")){
                 new Kirjoita(ctx,luettu);
+                continue;
             }
             if(luettu.equals("0")) {
                 return;

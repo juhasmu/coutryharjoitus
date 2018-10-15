@@ -5,7 +5,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 
 public class Lue {
     public Lue(AnnotationConfigApplicationContext ctx, String luettu) {
-    Country country = null;
+        Country country = null;
         if(luettu.contains("Finland")){
             country = ctx.getBean(Finland.class);
             new LueMaa(country);
