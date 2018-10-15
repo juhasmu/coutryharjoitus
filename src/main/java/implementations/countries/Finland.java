@@ -1,4 +1,4 @@
-package implementations;
+package implementations.countries;
 
 import interfaces.Country;
 import org.springframework.beans.factory.annotation.Qualifier;

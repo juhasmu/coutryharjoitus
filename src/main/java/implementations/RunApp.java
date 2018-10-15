@@ -1,7 +1,6 @@
 package implementations;
 
 import config.AppConfig;
-import interfaces.Country;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import java.util.Scanner;
@@ -10,7 +9,6 @@ public class RunApp {
     public RunApp(){
         String luettu;
         Scanner lukija = new Scanner(System.in);
-        String[] database ={"Finland","UnitedStates"};
         AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(AppConfig.class);
         while(true) {
             System.out.println("Kirjoita 0 niin lopetetaan");
